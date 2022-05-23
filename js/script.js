@@ -49,7 +49,11 @@ const our_partners_swiper = new Swiper(".partners-swiper", {
         nextEl: ".our-partners-next",
         prevEl: ".our-partners-prev",
     },
-
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+        },
+    },
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -62,11 +66,9 @@ const our_partners_swiper = new Swiper(".partners-swiper", {
 });
 
 const blog_swiper = new Swiper(".blog-swiper", {
-    spaceBetween: 0,
     breakpoints: {
         992: {
             slidesPerView: 2,
-            spaceBetween: 45,
         },
     },
     pagination: {

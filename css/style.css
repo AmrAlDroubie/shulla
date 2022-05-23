@@ -1,17 +1,41 @@
 /* fonts */
 
 @font-face {
-    font-family: "Speda";
-    src: url("../fonts/Speda.woff2") format("woff2"), url("../fonts/Speda.woff") format("woff");
-    font-weight: normal;
+    font-family: "Tajawal";
+    src: url("../fonts/Tajawal-Black.woff2") format("woff2"), url("../fonts/Tajawal-Black.woff") format("woff");
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Speda";
-    src: url("../fonts/Speda-Bold.woff2") format("woff2"), url("../fonts/Speda-Bold.woff") format("woff");
+    font-family: "Tajawal";
+    src: url("../fonts/Tajawal-Bold.woff2") format("woff2"), url("../fonts/Tajawal-Bold.woff") format("woff");
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Tajawal";
+    src: url("../fonts/Tajawal-ExtraBold.woff2") format("woff2"), url("../fonts/Tajawal-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Tajawal";
+    src: url("../fonts/Tajawal-Medium.woff2") format("woff2"), url("../fonts/Tajawal-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Tajawal";
+    src: url("../fonts/Tajawal-Regular.woff2") format("woff2"), url("../fonts/Tajawal-Regular.woff") format("woff");
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -49,7 +73,7 @@ a {
 
 body {
     direction: rtl;
-    font-family: "Speda", "sans-serif";
+    font-family: "Tajawal", "sans-serif";
     background-color: #fafafa;
 }
 
@@ -57,7 +81,7 @@ body {
     --clr-primary: #143d6a;
     --clr-secondry: #ec663b;
     --tran-primary: 0.4s;
-    --speda-font: "Speda", "sans-serif";
+    --tajawal-font: "Tajawal", "sans-serif";
     --bukra-font: "29LT Bukra", "sans-serif";
 }
 
@@ -110,7 +134,7 @@ body {
 
 /* Fonts */
 
-.speda-font {
+.tajawal-font {
     font-family: var(--speda-font);
 }
 
@@ -120,6 +144,10 @@ body {
 
 
 /* Some Classes */
+
+.fw-500 {
+    font-weight: 500;
+}
 
 .under-line-title::after {
     content: "";
@@ -238,6 +266,12 @@ body {
     margin-top: 25px;
 }
 
+.our-team-box img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+
 
 /* ===================== Our Services ===================== */
 
@@ -284,7 +318,7 @@ body {
 }
 
 .blog-section-box img {
-    height: 300px;
+    height: 285px;
     width: 50%;
     object-fit: cover;
     border-radius: 35px;
@@ -305,7 +339,7 @@ body {
 }
 
 .blog-section-box .content>* {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .blog-section-box .content a {
@@ -319,6 +353,18 @@ body {
 .our-services-next.swiper-button-hidden,
 .our-services-prev.swiper-button-hidden {
     opacity: 0;
+}
+
+.our-services .swiper-slide>img {
+    width: 135px;
+}
+
+.our-services .swiper-slide a:hover {
+    color: var(--clr-secondry);
+}
+
+.our-services .swiper-slide a {
+    font-size: 19px;
 }
 
 
@@ -387,12 +433,17 @@ body {
 
 .footer-social-media i {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     margin-right: 14px;
-    font-size: 35px;
+    font-size: 20px;
     color: var(--clr-primary);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--tran-primary);
+}
+
+.footer-social-media i:hover {
+    transform: translateY(-10px);
 }

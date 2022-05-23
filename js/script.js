@@ -5,7 +5,7 @@ const header_slider = new Swiper(".header-siwper", {
 const navbar = document.querySelector(".navbar");
 
 window.onscroll = function() {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 220) {
         navbar.classList.remove("mt-5");
         navbar.style.backgroundColor = "#143d6a";
     } else {
@@ -42,14 +42,14 @@ const our_services_swiper = new Swiper(".our-services-swiper", {
 });
 
 const our_partners_swiper = new Swiper(".partners-swiper", {
+    speed: 400,
     loop: true,
     spaceBetween: 15,
     navigation: {
         nextEl: ".our-partners-next",
         prevEl: ".our-partners-prev",
     },
-    slidesPerView: 4,
-    loopedSlides: 2,
+
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -62,7 +62,7 @@ const our_partners_swiper = new Swiper(".partners-swiper", {
 });
 
 const blog_swiper = new Swiper(".blog-swiper", {
-    spaceBetween: 25,
+    spaceBetween: 0,
     breakpoints: {
         992: {
             slidesPerView: 2,

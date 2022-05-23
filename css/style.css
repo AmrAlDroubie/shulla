@@ -204,6 +204,22 @@ body {
     }
 }
 
+.navbar-nav {
+    background-color: var(--clr-primary);
+}
+
+
+/* =======================  Header ========================== */
+
+.header .swiper-slide {
+    min-height: 500px;
+}
+
+.header .swiper-slide img {
+    object-fit: cover;
+    z-index: -1;
+}
+
 
 /* ======================== about Us ====================== */
 
@@ -217,8 +233,6 @@ body {
 .our-team-box {
     text-align: center;
 }
-
-.our-team-box img {}
 
 .our-team-box>div {
     margin-top: 25px;
@@ -310,13 +324,13 @@ body {
 
 /* ============================= our Partners ======================== */
 
-.our-partners {}
-
 .partner-box {
     background-color: #fff;
     width: 200px;
     height: 200px;
     border-radius: 40px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .partners-swiper {

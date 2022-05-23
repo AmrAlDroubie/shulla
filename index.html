@@ -28,11 +28,11 @@
             <a href="#" class="navbar-brand">
                 <img src="images/logo.svg" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+            <button class="navbar-toggler shadow-none border-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars clr-secondry"></i>
             </button>
-            <div class="navbar-collapse collapse">
-                <ul class="navbar-nav mx-auto">
+            <div class="navbar-collapse collapse" id="nav">
+                <ul class="navbar-nav mx-auto text-center">
 
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white">عن شعلة</a>
@@ -59,8 +59,11 @@
             <div class="swiper header-siwper">
                 <div class="swiper-wrapper">
                     <!-- swiper slide -->
-                    <div class="swiper-slide">
-                        <img src="images/header_landing.svg" class="w-100" alt="">
+                    <div class="swiper-slide position-relative d-flex align-items-center justify-content-center">
+                        <img src="images/header_landing.svg" class="w-100 position-absolute h-100 " alt="">
+                        <p class="fs-2 fw-bold text-white text-center">
+                            شعلة ..<br> ننير لك الطريق
+                        </p>
                     </div>
                 </div>
             </div>
@@ -504,7 +507,7 @@
     <!-- Swiper  -->
     <script src="./js/swiper-bundle.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- Main JS -->
     <script src="js/script.js"></script>
 </body>

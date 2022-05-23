@@ -1,0 +1,384 @@
+/* fonts */
+
+@font-face {
+    font-family: "Speda";
+    src: url("../fonts/Speda.woff2") format("woff2"), url("../fonts/Speda.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Speda";
+    src: url("../fonts/Speda-Bold.woff2") format("woff2"), url("../fonts/Speda-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "29LT Bukra";
+    src: url("../fonts/29LTBukra-Medium.woff2") format("woff2"), url("../fonts/29LTBukra-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Main  Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: "Speda", "sans-serif";
+    background-color: #fafafa;
+}
+
+:root {
+    --clr-primary: #143d6a;
+    --clr-secondry: #ec663b;
+    --tran-primary: 0.4s;
+    --speda-font: "Speda", "sans-serif";
+    --bukra-font: "29LT Bukra", "sans-serif";
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    background-color: var(--clr-primary);
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--clr-secondry);
+    height: 180px;
+}
+
+
+/* ===== Main Classes ===== */
+
+
+/* Colors */
+
+.clr-primary {
+    color: var(--clr-primary);
+}
+
+.clr-secondry {
+    color: var(--clr-secondry);
+}
+
+.back-primary {
+    background-color: var(--clr-primary);
+}
+
+.back-secondry {
+    background-color: var(--clr-secondry);
+}
+
+
+/* border */
+
+.border-primary {
+    border: 1px solid var(--clr-primary) !important;
+}
+
+.light-text {
+    color: #818181;
+}
+
+
+/* Fonts */
+
+.speda-font {
+    font-family: var(--speda-font);
+}
+
+.bukra-font {
+    font-family: var(--bukra-font);
+}
+
+
+/* Some Classes */
+
+.under-line-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: var(--clr-secondry);
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+}
+
+.index--1 {
+    z-index: -1;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* centered with position  */
+
+.center-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* centered with flex */
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* section title effect */
+
+.section-title-effect {
+    position: relative;
+}
+
+.section-title-effect::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: var(--clr-secondry);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    border-radius: 3px;
+}
+
+
+/* ========================= Navbar =================== */
+
+.navbar {
+    transition: var(--tran-primary);
+}
+
+.navbar-brand img {
+    max-width: 120px;
+}
+
+.nav-link {
+    font-size: 22px;
+    font-weight: normal;
+    transition: var(--tran-primary);
+}
+
+.nav-link:hover {
+    color: var(--clr-secondry) !important;
+}
+
+@media (min-width: 992px) {
+    .nav-link {
+        margin-left: 70px;
+    }
+}
+
+
+/* ======================== about Us ====================== */
+
+.about-us-feat img {
+    height: 70px;
+}
+
+
+/* ======================= Our Team ======================= */
+
+.our-team-box {
+    text-align: center;
+}
+
+.our-team-box img {}
+
+.our-team-box>div {
+    margin-top: 25px;
+}
+
+
+/* ===================== Our Services ===================== */
+
+.our-services-next,
+.our-services-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-secondry);
+    color: var(--clr-primary);
+    font-size: 20px;
+    z-index: 333;
+}
+
+.swiper-button-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 991px) {
+    .our-services-next,
+    .our-services-prev {
+        display: none;
+    }
+}
+
+.our-services-swiper .swiper-slide p {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.blog-section-box {
+    border-radius: 35px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 20%);
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+.blog-section-box img {
+    height: 300px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+@media (max-width: 991px) {
+    .blog-section-box img {
+        width: 100%;
+    }
+}
+
+.blog-section-box .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.blog-section-box .content>* {
+    font-weight: bold;
+}
+
+.blog-section-box .content a {
+    font-size: 20px;
+}
+
+.swiper-button-hidden {
+    opacity: 0;
+}
+
+.our-services-next.swiper-button-hidden,
+.our-services-prev.swiper-button-hidden {
+    opacity: 0;
+}
+
+
+/* ============================= our Partners ======================== */
+
+.our-partners {}
+
+.partner-box {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+}
+
+.partners-swiper {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.our-partners-next,
+.our-partners-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-secondry);
+    color: var(--clr-primary);
+    font-size: 20px;
+    z-index: 333;
+}
+
+
+/* swiper */
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+    margin-top: 35px;
+    z-index: 333;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid var(--clr-secondry);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--clr-secondry);
+    opacity: 1;
+}
+
+
+/* ======================== Footer ======================= */
+
+.footer-social-media i {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 14px;
+    font-size: 35px;
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
